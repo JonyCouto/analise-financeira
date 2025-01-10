@@ -19,3 +19,47 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.header{
+  box-shadow: 0px 2px 3px 4px rgba(0, 0, 0, 0.2);
+  grid-template: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer{
+  grid-template: footer;
+  box-shadow: 0px 2px 3px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  grid-template: main;
+  min-height: 80vh;
+}
+
+.body{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 20vh 1fr 10vh;  
+}
+
+h1{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.home{
+  background-image: url('../assets/home.webp');
+  background-size: cover;
+  padding: 20px;
+}
+
+.home h1{
+  color: rgb(229, 142, 2);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);;
+}
