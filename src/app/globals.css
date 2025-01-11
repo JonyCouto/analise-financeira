@@ -39,6 +39,13 @@ body {
 .main{
   grid-template: main;
   min-height: 80vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.main > div{
+  width: 100%;
 }
 
 .body{
@@ -56,6 +63,18 @@ h1{
 .home{
   background-image: url('../assets/home.webp');
   background-size: cover;
+  padding: 20px;
+}
+
+.questions{
+  padding: 20px;
+}
+
+.results{
+  padding: 20px;
+}
+
+.introduction{
   padding: 20px;
 }
 

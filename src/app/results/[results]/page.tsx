@@ -4,11 +4,13 @@ import { Grid2 } from "@mui/material"
 import {Button} from "@mui/material";
 import Divider from '@mui/material/Divider';
 import Link from "next/link";
-import { useRouter } from 'next/router';
+import { useParams } from "next/navigation";
+// import { useRouter } from 'next/router';
 
 export default function Result() {
-    const router = useRouter();
-    const results = parseInt(router.query.results as string);  // Captura o valor da query string "results"
+    // const router = useRouter();
+    // const results = parseInt(router.query.results as string);  // Captura o valor da query string "results"
+    const {results} = useParams();
     const message = () => {
         if (results >= 40) {
            return "Sua gestão financeira parece bem estruturada, com poucos desafios.";
@@ -21,7 +23,7 @@ export default function Result() {
         }
     }
     return (
-        <Grid2 container spacing={2} sx={{justifyContent: "center", alignItems: "center", height: "100%", textAlign: "center", padding: "5px", rowGap: "0px"}}>
+        <Grid2 container spacing={2} sx={{justifyContent: "center", alignItems: "center", height: "100%", textAlign: "center", padding: "5px", rowGap: "0px"}} className="results">
             <Grid2 size={{md: 12, lg: 6}}>
                 <h2>Resultado Final</h2>
                 <h1>{results}</h1>
@@ -31,8 +33,6 @@ export default function Result() {
                     <Button variant="contained" className="mt-4">Finalizar</Button>
                 </Link>
             </Grid2>
-            <Grid2 size="grow">
-            </Grid2>
         </Grid2>
     )
-}
+} 

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Introduction() {
     return (
-        <Grid2 container spacing={2} sx={{justifyContent: "center", alignItems: "center", height: "100%", textAlign: "end", padding: "5px", rowGap: "0px"}}>
+        <Grid2 container spacing={2} sx={{justifyContent: "center", alignItems: "center", height: "100%", textAlign: "end", padding: "5px", rowGap: "0px"}} className="introduction">
             <Grid2 size={{md: 12, lg: 6}}>
                 <h2>Funciona da seguinte forma:</h2>
                 <h2>Avalie de 1 a 5 o quanto você concorda com cada afirmação</h2>
